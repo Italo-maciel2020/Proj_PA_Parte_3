@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/icones">
+        <file alias="Quit">Sair.png</file>
+        <file>Salvar.png</file>
+        <file>Box.png</file>
+        <file>CortarBox.png</file>
+        <file>CortarElipse.png</file>
+        <file>CortarVoxel.png</file>
+        <file>Elipse.png</file>
+        <file>Voxel.png</file>
+    </qresource>
+</RCC>

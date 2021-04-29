@@ -1,0 +1,46 @@
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include <cstdlib>
+#include "plotter.h"
+#include <QStringList>
+
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    r = g = b = 255;
+ /*connect(ui->pushButtonQuit,
+          SIGNAL(clicked(bool)),
+          this,
+          SLOT(teste()));*/
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::Sair()
+{
+    exit(0);
+}
+
+void MainWindow::SetB(int _b){
+    b=_b;
+    updateColor();
+}
+
+void MainWindow::SetR(int _r){
+    r=_r;
+    updateColor();
+}
+
+void MainWindow::SetG(int _g){
+    g=_g;
+    updateColor();
+}
+
+
+

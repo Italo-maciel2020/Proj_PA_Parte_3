@@ -54,7 +54,7 @@ void Sculptor::setColor(float _r, float _g, float _b, float alpha){
   this->b = _b;
   a = alpha;
 }
-
+//Método que ativa um vóxel
 void Sculptor::putVoxel(int x, int y, int z)
 {
   v[x][y][z].isOn = true;
@@ -63,7 +63,7 @@ void Sculptor::putVoxel(int x, int y, int z)
   v[x][y][z].b = b;
   v[x][y][z].a = a;
 }
-
+//Método para desativar um vóxel
 void Sculptor::cutVoxel(int x, int y, int z){
   v[x][y][z].isOn = false;
 }
@@ -92,7 +92,7 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
     }
   }
 }
-
+//Método para ativar vóxels na forma de uma esfera a partir de seu centro e raio
 void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
   for(int i= xcenter - radius; i< nx; i++){
     for(int j= ycenter - radius; j< ny; j++){
@@ -105,7 +105,7 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
     }
   }
 }
-
+//Método que desativa vóxels em formato de esfera
 void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
   for(int i= xcenter - radius; i< nx; i++){
     for(int j= ycenter - radius; j< ny; j++){
@@ -119,7 +119,7 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
   }
 }
 
-
+//Método para ativar vóxels na forma de uma elipse a partir de seu centro e raios
 void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
   for(int i=xcenter - rx; i< nx; i++){
     for(int j=ycenter - ry; j< ny; j++){
@@ -132,7 +132,7 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     }
   }
 }
-
+//Método para desativar vóxels na forma de uma elipse
 void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
   for(int i=xcenter - rx; i< nx; i++){
     for(int j=ycenter - ry; j< ny; j++){
@@ -145,7 +145,7 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     }
   }
 }
-
+//Método para salvar o arquivo produzido pela chamada dos métodos acima
 void Sculptor::writeOFF(char* nome){
   ofstream f_out;
   f_out.open(nome);

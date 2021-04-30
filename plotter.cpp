@@ -13,4 +13,5 @@ QBrush brush;
 QPen pen;
 brush.setColor(QColor());
 brush.setStyle(Qt::SolidPattern);
+pen.setColor(QColor());
 }

@@ -8,5 +8,6 @@
         <file>CortarVoxel.png</file>
         <file>Elipse.png</file>
         <file>Voxel.png</file>
+        <file>Esfera.png</file>
     </qresource>
 </RCC>

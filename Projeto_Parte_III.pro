@@ -17,16 +17,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     Sculptor.cpp \
+    dialog.cpp \
     main.cpp \
     mainwindow.cpp \
     plotter.cpp
 
 HEADERS += \
+    dialog.h \
     mainwindow.h \
     plotter.h \
     sculptor.h
 
 FORMS += \
+    dialog.ui \
     mainwindow.ui
 
 TRANSLATIONS += \

@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+
 #include <QMainWindow>
 #include <QActionGroup>
 #include "sculptor.h"
@@ -16,15 +17,15 @@ class MainWindow : public QMainWindow
 
 public slots:
     void Sair(); // interface slot, quem processa essas palavras reservadas são as máquinas declaradas no q_object
-   /* void SetG(int);
+    void SetG(int);
     void SetR(int);
     void SetB(int);
     void pickColor();
-    void updateCoords(int,int);*/
+    void updateCoords(int,int);
 
 private slots:
-   /* void actionSalvar();
-    void actionNew();
+   void actionSalvar();
+   void actionNew();
     void actionInsertSphere();
     void actionInsertEllipsoid();
     void actionCutSphere();
@@ -34,11 +35,9 @@ private slots:
     void actionCutBox();
     void actionCutVoxel();
     void clickedPlaneXY();
-    void clickedPlaneYZ();
-    void clickedPlaneXZ();
     void InsertValuerX();
     void InsertValuerY();
-    void InsertValuerZ();*/
+    void InsertValuerZ();
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -46,12 +45,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    /*int r,g,b;
+   int r,g,b;
     void updateColor();
     Sculptor *arq;
     int dimx,dimy,dimz;
     int currentObject;
     int currentPlane;
-    QActionGroup *actionGroup;*/
+    QActionGroup *actionGroup;
 };
+
 #endif // MAINWINDOW_H
